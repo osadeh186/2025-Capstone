@@ -1,0 +1,6 @@
+﻿Capture the flag, 2D top down view, 3v3(?), player plays as a player captain of his team, and can move around with WASD (arrow keys) and sprint with shift as well as draw paths and plans for the Bot teammates to follow in order to capture the flag from the opposing Bot team. Each character will have stats such as speed and stamina and agility that the player can choose how to allocate his skill points to those stats and for the bots will either be random or based on a difficulty chosen by the player. Best of 3 games, to win each game capture the flag 2 times (best of 3). Temporary Power Ups available for pickup on the field? 
+
+If 5v5, the player can assign his teammates to play defensive or offensive.
+
+
+Pixel Art art style, Graphics using processing library.
