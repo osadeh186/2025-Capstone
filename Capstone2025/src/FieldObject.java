@@ -8,6 +8,7 @@ public class FieldObject {
   public FieldObject(double x, double y){
     this.x = x;
     this.y = y;
+    hitbox = new Rectangle();
   }
 
   public double getX(){
