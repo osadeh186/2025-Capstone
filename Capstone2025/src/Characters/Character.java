@@ -36,20 +36,21 @@ public class Character {
 	public void moveX(double change) {
 		this.x += change;
 	}
-	public void step(int m) {
+	public void step(String m) {
+		
 		//method takes in a number 0-3
 		//0 go right 
 		//1 go left
 		//2 go up 
 		//3 go down 
 		switch(m) {
-		case 0: 
+		case "right": 
 			this.moveX(9);
-		case 1:
+		case "left":
 			this.moveX(-9);
-		case 2:
+		case "up":
 			this.moveY(-9);
-		case 3:
+		case "down":
 			this.moveY(9);
 			
 		}
