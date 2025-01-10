@@ -13,7 +13,7 @@ public class Character {
 		this.x = 0;
 		this.y = 0;
 	}
-	public void step() {
+	public void step(int m) {
 		
 	}
 }

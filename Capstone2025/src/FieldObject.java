@@ -1,17 +1,24 @@
+import java.awt.Rectangle;
+
 public class FieldObject {
 
-  double x, y;
+  private double x, y;
+  private Rectangle hitbox;
 
   public FieldObject(double x, double y){
     this.x = x;
     this.y = y;
   }
 
-  public getX(){
+  public double getX(){
     return x;
   }
 
-  public getY(){
+  public double getY(){
     return y;
+  }
+  
+  public Rectangle getHitbox() {
+	  return hitbox;
   }
 }
