@@ -3,13 +3,15 @@ import java.awt.Rectangle;
 
 public class FieldObject {
 
-  private double x, y;
+  private double x, y, width, height;
   private Rectangle hitbox;
-
-  public FieldObject(double x, double y){
+	
+  public FieldObject(double x, double y, double width, double height){
     this.x = x;
     this.y = y;
-    hitbox = new Rectangle();
+    this.width = width;
+    this.height = height;
+    hitbox = new Rectangle(x, y, width, height);
   }
 
   public double getX(){
@@ -17,10 +19,18 @@ public class FieldObject {
   }
 
   public double getY(){
-    return y;
+	  return y;
+  }
+
+  public double getWidth(){
+    return width;
+  }
+
+  public double getHeight(){
+	  return height;
   }
   
   public Rectangle getHitbox() {
-	  return hitbox;
+  	return hitbox;
   }
 }
