@@ -38,11 +38,7 @@ public class Character {
 	}
 	public void step(String m) {
 		
-		//method takes in a number 0-3
-		//0 go right 
-		//1 go left
-		//2 go up 
-		//3 go down 
+		
 		switch(m) {
 		case "right": 
 			this.moveX(9);
