@@ -1,5 +1,7 @@
 package Characters;
 
+import processing.core.PApplet;
+
 public class Character {
 
 	private double x, y;
@@ -51,6 +53,9 @@ public class Character {
 			this.moveY(9);
 			
 		}
+		
+	}
+	public void draw(PApplet surface) {
 		
 	}
 	
