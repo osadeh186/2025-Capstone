@@ -9,7 +9,7 @@ public class DrawingSurface extends PApplet {
 	
 	
 	public void settings() {
-		setSize(1820,1080);
+		setSize(800,600);
 	}
 	
 	
