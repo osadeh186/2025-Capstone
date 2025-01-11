@@ -2,7 +2,7 @@ package Characters;
 
 import processing.core.PApplet;
 
-public class Character {
+public abstract class Character {
 
 	private double x, y;
 	private int velocity, agility, stamina;
@@ -37,24 +37,22 @@ public class Character {
 		this.x += change;
 	}
 	public void step(String m) {
-		
-		
-		switch(m) {
-		case "right": 
+		if(m.equals("right"))
 			this.moveX(9);
-		case "left":
-			this.moveX(-9);
-		case "up":
+		
+		if(m.equals("up")) 
 			this.moveY(-9);
-		case "down":
+		
+		if(m.equals("left"))
+			this.moveX(-9);
+		
+		if(m.equals("down"))
 			this.moveY(9);
-			
-		}
+
+		
 		
 	}
-	public void draw(PApplet surface) {
-		
-	}
+	public abstract void draw(PApplet surface);
 	
 	
 }
