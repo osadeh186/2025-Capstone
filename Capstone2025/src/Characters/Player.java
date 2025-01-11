@@ -7,7 +7,7 @@ public class Player extends Character {
 	
 	
 	public Player(double x, double y) {
-		super(x,y);
+		super(x,y,9,0,0);
 	}
 	public Player() {
 		super();

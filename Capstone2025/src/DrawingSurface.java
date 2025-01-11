@@ -17,10 +17,11 @@ public class DrawingSurface extends PApplet {
 	
 	public void draw() {
 		background(255,255,255);
-		
-		
+//		double x= plyr.getX();
+//		double y = plyr.getY();
+		//rect(50,50,50,50);
 		plyr.draw(this);
-		if(up)
+		if(up) 
 			plyr.step("up");
 		if(down) 
 			plyr.step("down");

@@ -5,12 +5,13 @@ import processing.core.PApplet;
 public abstract class Character {
 
 	private double x, y;
-	private int velocity, agility, stamina;
+	private int velocity, stamina, strength;
 	
-	public Character(double x, double y) {
+	public Character(double x, double y, int velocity, int stamina, int strength) {
 		this.x = x;
 		this.y = y;
-		
+		this.velocity = velocity;
+		this.stamina = stamina;
 	}
 	
 	public Character() {
@@ -38,16 +39,16 @@ public abstract class Character {
 	}
 	public void step(String m) {
 		if(m.equals("right"))
-			this.moveX(9);
+			this.moveX(velocity);
 		
 		if(m.equals("up")) 
-			this.moveY(-9);
+			this.moveY(-1*velocity);
 		
 		if(m.equals("left"))
-			this.moveX(-9);
+			this.moveX(-1*velocity);
 		
 		if(m.equals("down"))
-			this.moveY(9);
+			this.moveY(velocity);
 
 		
 		

@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class Bot extends Character {
 	
 	public Bot(double x, double y) {
-		super(x,y);
+		super(x,y,9,0,0);
 	}
 
 	@Override
