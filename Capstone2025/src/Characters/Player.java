@@ -15,7 +15,7 @@ public class Player extends Character {
 	@Override
 	public void draw(PApplet surface) {
 			//will be drawn as a small rectangle until we have graphics done
-		surface.rect((float)super.getX(),(float)super.getY(),18f,18f);
+		surface.rect((float)super.getX(),(float)super.getY(),27,27);
 	}
 	
 }
