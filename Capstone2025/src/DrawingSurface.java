@@ -29,7 +29,6 @@ public class DrawingSurface extends PApplet {
 			plyr.step("right");
 		if(left)
 			plyr.step("left");	
-		
 	}
 	
 	
