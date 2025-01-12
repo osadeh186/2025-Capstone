@@ -13,7 +13,7 @@ public class FieldObject {
     this.height = height;
     hitbox = new Rectangle(x, y, width, height); //apparently the rectangle class is not what we thought it is
     //you could use the processing rect method that just creates a rectangle 
-  }//if you still wanna use it as a class you can take your jar file from your projects from semester 1
+  }//I did add MY jar files of the shapes class you can use it if you want
 
   public double getX(){
     return x;

@@ -19,7 +19,7 @@ public class DrawingSurface extends PApplet {
 		background(255,255,255);
 //		double x= plyr.getX();
 //		double y = plyr.getY();
-		//rect(50,50,50,50);
+		rect(50,50,50,50);
 		plyr.draw(this);
 		if(up) 
 			plyr.step("up");
@@ -31,6 +31,8 @@ public class DrawingSurface extends PApplet {
 			plyr.step("left");	
 		
 	}
+	
+	
 	public void keyPressed() {
 		if(key == 'w')
 			up = true;
@@ -40,7 +42,6 @@ public class DrawingSurface extends PApplet {
 			right = true;
 		if(key == 'a')
 			left = true;
-
 	}
 	public void keyReleased() {
 		if(key == 'w')

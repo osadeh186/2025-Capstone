@@ -1,9 +1,13 @@
 package Characters;
 
+import java.awt.Rectangle;
+
 import processing.core.PApplet;
-
+/**
+ * 
+ */
 public abstract class Character {
-
+	
 	private double x, y;
 	private int velocity, stamina, strength;
 	
@@ -12,6 +16,7 @@ public abstract class Character {
 		this.y = y;
 		this.velocity = velocity;
 		this.stamina = stamina;
+		this.strength = strength;
 	}
 	
 	public Character() {
