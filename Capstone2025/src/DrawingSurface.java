@@ -5,6 +5,7 @@ public class DrawingSurface extends PApplet {
 	//consider adding all players+bots as fields if the number of them is fixed
 	private Player plyr = new Player(400,300); // experimental player 
 	private boolean up = false , down = false, right =false, left = false;
+	private double relBoX = 0, relBoY = 0; //relative Board / Object x, relative Board /object y
 	public DrawingSurface() {
 	}
 	
@@ -17,18 +18,25 @@ public class DrawingSurface extends PApplet {
 	
 	public void draw() {
 		background(255,255,255);
-//		double x= plyr.getX();
-//		double y = plyr.getY();
-		rect(50,50,50,50);
+		//every time any kind of object is created (other than the player itself)
+		//its coordinates (instead just (x,y)) should be set to:
+		//(relBoX + (intended coordinate x), relBoY + (intended coordinate y))
+		fill(255,0,0);
+		//temporary rectangles :
+		rect((float)(relBoX+50),(float)(relBoY+50),50,50);
+		rect((float)(relBoX+550),(float)(relBoY+450),50,50);
+		rect((float)(relBoX+50),(float)(relBoY+450),50,50);
+		rect((float)(relBoX+550),(float)(relBoY+50),50,50);
+		fill(0,255,0);
 		plyr.draw(this);
 		if(up) 
-			plyr.step("up");
+			relBoY += plyr.getVel();
 		if(down) 
-			plyr.step("down");
+			relBoY -= plyr.getVel();
 		if(right)
-			plyr.step("right");
+			relBoX -= plyr.getVel();
 		if(left)
-			plyr.step("left");	
+			relBoX += plyr.getVel();
 	}
 	
 	

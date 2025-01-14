@@ -23,6 +23,9 @@ public abstract class Character {
 		this.x = 0;
 		this.y = 0;
 	}
+	public int getVel() {
+		return velocity;
+	}
 	public double getX() {
 		return x;
 	}
