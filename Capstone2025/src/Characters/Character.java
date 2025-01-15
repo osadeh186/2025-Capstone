@@ -2,15 +2,25 @@ package Characters;
 
 import java.awt.Rectangle;
 
+import Field.FieldObject;
 import processing.core.PApplet;
 /**
- * 
+ * A super class for both player and bots. Represents the general character and contains qualities of every character
+ * such as the coordinate of the character, 
+ * the velocity stamina and strength(which determine the character's ability to help their team winning  
  */
 public abstract class Character {
 	
 	private double x, y;
 	private int velocity, stamina, strength;
-	
+	/**
+	 * constructs a general character. constructor of super class to Bot and Player
+	 * @param x coordinate x
+	 * @param y coordinate y
+	 * @param velocity determine the velocity of the character 
+	 * @param stamina determine the stamina of the character 
+	 * @param strength determine the strength of the character 
+	 */
 	public Character(double x, double y, int velocity, int stamina, int strength) {
 		this.x = x;
 		this.y = y;
@@ -18,10 +28,15 @@ public abstract class Character {
 		this.stamina = stamina;
 		this.strength = strength;
 	}
-	
+	/**
+	 * constructs default character with default traits 
+	 */
 	public Character() {
 		this.x = 0;
 		this.y = 0;
+		this.velocity = 0;
+		this.stamina = 0;
+		this.strength = 0;
 	}
 	public int getVel() {
 		return velocity;
@@ -38,13 +53,26 @@ public abstract class Character {
 	public void setY(double y) {
 		this.y = y;
 	}
-	
+	/**
+	 * move the character on the Y axis
+	 * @param change the change of the Y coordinate (negative for up, positive for down)
+	 */
 	public void moveY(double change) {
 		this.y += change;
 	}
+	/**
+	 * move the character on the X axis
+	 * @param change the change of the X coordinate
+	 */
 	public void moveX(double change) {
 		this.x += change;
 	}
+	/**
+	 * take a step on the board
+	 * step is determined by the velocity of the character,
+	 * one step = moving the amount of pixels as the value of the velocity 
+	 * @param m the direction in which the step is taken. example: "right" would make the character take a step to the right
+	 */
 	public void step(String m) {
 		if(m.equals("right"))
 			this.moveX(velocity);
@@ -61,6 +89,12 @@ public abstract class Character {
 		
 		
 	}
+	public abstract void collisionChar(Character other);
+		
+	
+	public abstract void collisionObject(FieldObject other) ;
+		
+	
 	public abstract void draw(PApplet surface);
 	
 	
