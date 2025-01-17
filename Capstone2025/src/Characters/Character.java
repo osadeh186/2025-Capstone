@@ -12,6 +12,7 @@ import processing.core.PApplet;
 public abstract class Character {
 	
 	private double x, y;
+	private boolean onPlayerTeam; //true - on player's team, false otherwise
 	private int velocity, stamina, strength;
 	/**
 	 * constructs a general character. constructor of super class to Bot and Player
@@ -20,13 +21,15 @@ public abstract class Character {
 	 * @param velocity determine the velocity of the character 
 	 * @param stamina determine the stamina of the character 
 	 * @param strength determine the strength of the character 
+	 * @param onPlayerTeam true if character belongs to player's team, false otherwise
 	 */
-	public Character(double x, double y, int velocity, int stamina, int strength) {
+	public Character(double x, double y, int velocity, int stamina, int strength, boolean onPlayerTeam) {
 		this.x = x;
 		this.y = y;
 		this.velocity = velocity;
 		this.stamina = stamina;
 		this.strength = strength;
+		this.onPlayerTeam = onPlayerTeam;
 	}
 	/**
 	 * constructs default character with default traits 
@@ -37,6 +40,7 @@ public abstract class Character {
 		this.velocity = 0;
 		this.stamina = 0;
 		this.strength = 0;
+		this.onPlayerTeam = true;
 	}
 	public int getVel() {
 		return velocity;
@@ -88,6 +92,9 @@ public abstract class Character {
 
 		
 		
+	}
+	public boolean getOnPlayerTeam() {
+		return this.onPlayerTeam;
 	}
 	public abstract void collisionChar(Character other);
 		
