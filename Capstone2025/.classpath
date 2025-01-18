@@ -7,7 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/processing_core.jar"/>
-	<classpathentry kind="lib" path="lib/shapes10-14.jar"/>
 	<classpathentry kind="lib" path="lib/shape_10-24-24alevy.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
