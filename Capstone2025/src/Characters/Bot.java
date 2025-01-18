@@ -25,5 +25,8 @@ public class Bot extends Character {
 		// TODO Auto-generated method stub
 		
 	}
+	public void figureNextStep() {
+		
+	}
 
 }
