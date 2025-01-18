@@ -44,6 +44,6 @@ public class FieldObject {
   }
 
   public void draw(PApplet surface){
-    surface.rect(x,y,width,height);
+    surface.rect((float)x,(float)y,(float)width,(float)height);
   }
 }
