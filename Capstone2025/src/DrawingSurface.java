@@ -6,9 +6,10 @@ public class DrawingSurface extends PApplet {
 	private Player plyr = new Player(400,300); // experimental player 
 	private boolean up = false , down = false, right =false, left = false;
 	private double relBoX = 0, relBoY = 0; //relative Board / Object x, relative Board /object y
+
+
 	public DrawingSurface() {
 	}
-	
 	
 	public void settings() {
 
