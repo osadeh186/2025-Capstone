@@ -5,8 +5,8 @@ import processing.core.PApplet;
 
 public class Bot extends Character {
 	private boolean defenseMode; 
-	public Bot(double x, double y,  int velocity, int stamina, int strength, boolean defenseMode, boolean onPlayerTeam) {
-		super(x,y,velocity,stamina,strength, onPlayerTeam);
+	public Bot(double x, double y,  int velocity, int stamina, boolean defenseMode, boolean onPlayerTeam) {
+		super(x,y,velocity,stamina, onPlayerTeam);
 	}
 	
 	@Override
