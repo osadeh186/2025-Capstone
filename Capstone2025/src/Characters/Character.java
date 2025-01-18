@@ -67,6 +67,9 @@ public abstract class Character {
 		if(m.equals("down"))
 			this.moveY(velocity);
 	}
+	public void sprint() {
+		
+	}
 	public boolean getOnPlayerTeam() {
 		return this.onPlayerTeam;
 	}
