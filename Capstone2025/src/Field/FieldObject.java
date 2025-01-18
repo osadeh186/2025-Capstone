@@ -1,5 +1,4 @@
 package Field;
-import java.awt.Rectangle;
 
 public class FieldObject {
 
