@@ -7,7 +7,7 @@ public class Tree extends FieldObject{
   private static final double TREE_WIDTH = 20;
   
   public Tree(double x, double y){
-    super(x,y, TREE_WIDTH, TREE_HEIGHT);
+    super(x,y, TREE_WIDTH, TREE_HEIGHT, true);
   }
 
   public void draw(PApplet surface){
