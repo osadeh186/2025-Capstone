@@ -9,6 +9,7 @@ public class Flag extends FieldObject{
     super(x,y, FLAG_RAD, FLAG_RAD, false);
   }
 
+  @Override
   public void draw(PApplet surface){
     surface.circle((float)getX(), (float)getY(), (float)FLAG_RAD);
   }

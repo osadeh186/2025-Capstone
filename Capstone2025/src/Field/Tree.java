@@ -9,8 +9,4 @@ public class Tree extends FieldObject{
   public Tree(double x, double y){
     super(x,y, TREE_WIDTH, TREE_HEIGHT, true);
   }
-
-  public void draw(PApplet surface){
-    surface.rect((float)getX(), (float)getY(), (float)TREE_WIDTH, (float)TREE_HEIGHT);
-  }
 }

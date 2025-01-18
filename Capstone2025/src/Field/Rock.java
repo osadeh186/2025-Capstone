@@ -9,6 +9,7 @@ public class Rock extends FieldObject{
     super(x,y, ROCK_RAD, ROCK_RAD, true);
   }
 
+  @Override
   public void draw(PApplet surface){
     surface.circle((float)getX(), (float)getY(), (float)ROCK_RAD);
   }

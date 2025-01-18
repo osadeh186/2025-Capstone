@@ -1,6 +1,7 @@
 package Field;
 
 import alevy446.Shapes.Rectangle;
+import processing.core.PApplet;
 
 public class FieldObject {
 
@@ -40,5 +41,9 @@ public class FieldObject {
 
   public Boolean getIsSolid(){
     return isSolid;
+  }
+
+  public void draw(PApplet surface){
+    surface.rect(x,y,width,height);
   }
 }
