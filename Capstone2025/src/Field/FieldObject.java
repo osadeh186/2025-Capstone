@@ -1,5 +1,7 @@
 package Field;
 
+import alevy446.Shapes.Rectangle;
+
 public class FieldObject {
 
   private double x, y, width, height;
